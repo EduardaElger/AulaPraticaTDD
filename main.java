@@ -1,7 +1,9 @@
 class Main {
-  public static void main(String[] args) {
-     Teste teste = new Teste();
-     teste.testMultiplication(); 
-     teste.testEquality();
-	}
-}
+    public static void main(String[] args){
+      tests teste = new tests();
+      teste.testMultiplication();
+      teste.testEquality();
+      teste.testFrancMultiplication();
+      teste.testCurrency();
+    }
+  } 
