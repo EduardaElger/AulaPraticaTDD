@@ -4,6 +4,14 @@ public void testFrancMultiplication() {
    assertEquals(new Franc(15), five.times(3));
 }
 
+public void testEquality() {
+   assertTrue(new Dollar(5).equals(new Dollar(5)));
+   assertFalse(new Dollar(5).equals(new Dollar(6)));
+   assertTrue(new Franc(5).equals(new Franc(5)));
+   assertFalse(new Franc(5).equals(new Franc(6)));
+   assertFalse(new Franc(5).equals(new Dollar(5)));
+}
+
 class Franc {   
    private int amount;					
    Franc(int amount) {      
@@ -15,5 +23,8 @@ class Franc {
     public boolean equals(Object object) {					
        Franc franc = (Franc) object;      
        return amount == franc.amount;					
-     }					
+     }			
+    Money times(int multiplier)  {
+    return new Franc(amount * multiplier);
+   }		
 }

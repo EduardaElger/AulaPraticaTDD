@@ -9,6 +9,9 @@ class Dollar {
       Dollar times(int multiplier) {
       return new Dollar(amount * multiplier);
    }
+   Money times(int multiplier)  {
+   return new Dollar(amount * multiplier);
+   }
 }	
 
 public void testMultiplication() {
